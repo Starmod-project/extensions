@@ -1,10 +1,10 @@
-サービス:
-  - むしゃむしゃ: たんむ
- 名前: そりょんしゃくくく
- 環境: 静的
- 計画: 無料
- 公開りんんん: .
- ・・・・・:
-      - サロンガンガンガンガンガン: /*
- 名前: むクセス制御許可オジン
- 値: 「*」
+services:
+  - type: web
+    name: turbowarp-extensions
+    env: static
+    plan: free
+    publishDir: .
+    headers:
+      - path: /*
+        name: Access-Control-Allow-Origin
+        value: "*"
