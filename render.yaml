@@ -1,9 +1,13 @@
 services:
-  - type: static
+  - type: web
     name: turbowarp-extensions
-    env: static
+    env: node
     plan: free
-    publishDir: .
+    # 依存関係のインストール（npm install）をスキップします
+    buildCommand: ""
+    # サーバーを直接起動
+    startCommand: npm start
+    # TurboWarp用のCORS設定
     headers:
       - path: /*
         name: Access-Control-Allow-Origin
